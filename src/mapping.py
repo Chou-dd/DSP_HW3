@@ -5,7 +5,6 @@ if(len(arg) != 3):
     sys.exit(1)
 fin = open(arg[1], "r", encoding = "big5-hkscs")
 fop = open(arg[2], "w", encoding = "big5-hkscs")
-fop1 = open("test.txt", "w")
 ZhuYin_list = fin.readlines()
 fin.close()
 Big5_list = []
@@ -46,6 +45,4 @@ for line in ZhuYin_list:
 for n in range(len(Big5_list)):
     Big5_list[n] = Big5_list[n] + "\n"
 fop.writelines(Big5_list)
-fop1.writelines(Big5_list)     
 fop.close()
-fop1.close()
